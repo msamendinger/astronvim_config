@@ -7,9 +7,15 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
+    -- set ruler on column 80
+    colorcolumn = "80",
+    -- use treesitter for folding
+    foldmethod = "expr",
+    foldexpr = "nvim_treesitter#foldexpr()",
   },
   g = {
-    mapleader = " ", -- sets vim.g.mapleader
+    -- set leader to , as I want to use space for folding
+    mapleader = ",", -- sets vim.g.mapleader
     autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true, -- enable completion at start
     autopairs_enabled = true, -- enable autopairs at start
